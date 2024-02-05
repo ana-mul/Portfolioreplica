@@ -9,12 +9,7 @@ imagen.addEventListener("mouseout", () => {
   imagen.src = "images/img-main.png";
 });
 
-// Mostrar más información en la sección de My Portfolio:
-// ● Agrega un botón "Saber más" a cada tarjeta de la sección de Portfolio.
-// ● Añade un estilo a la cards para mostrar una caja superpuesta con más
-// texto al hacer click en ‘saber más’, la misma incluye un botón de
-// GitHub en la caja superpuesta que lleva al repositorio. Agrega un botón
-// "Cerrar" en la caja superpuesta para cerrarla y volver a la vista original.
+// CARDS SABER MAS
 
 let mas = document.querySelectorAll(".card-port .btn-mas");
 let parrafo = document.querySelectorAll(".card-port-hide .p-mas");
@@ -23,21 +18,51 @@ let menos = document.querySelectorAll(".card-port-hide .btn-menos");
 let cardOriginal = document.querySelectorAll(".card-port");
 let cardMas = document.querySelectorAll(".card-port-hide");
 
-mas.forEach((masList, index) => { //como querySelector llama una coleccion de elementos, tengo que lograr iterar sobre cada uno 
-  masList.addEventListener("click", () => { //una vez que logro acceder a cada elemento utilizo el evento
-    let indexCardOriginal = cardOriginal[index]; //aca  necesito acceder a cada una de las cards 
+mas.forEach((masList, index) => {
+  //como querySelector llama una coleccion de elementos, tengo que lograr iterar sobre cada uno
+  masList.addEventListener("click", () => {
+    //una vez que logro acceder a cada elemento utilizo el evento
+    let indexCardOriginal = cardOriginal[index]; //aca  necesito acceder a cada una de las cards
     let indexCardMas = cardMas[index];
     indexCardOriginal.style.display = "none"; //una vez que accedi a cada indice, llevo a cabo el cambio de estilo
     indexCardMas.style.display = "inline";
   });
 });
 
-//aca para ver menos hago lo mismo, pero usando el otro boton 9
+//aca para ver menos hago lo mismo, pero usando el otro boton
 menos.forEach((menosList, index) => {
-    menosList.addEventListener("click", ()=>{
+  menosList.addEventListener("click", () => {
     let cardOriginalindex = cardOriginal[index];
     let cardMasIndex = cardMas[index];
     cardOriginalindex.style.display = "inline";
     cardMasIndex.style.display = "none";
-    });
+  });
 });
+
+// MENSAJE FORMULARIO
+
+let form = document.querySelector(".form");
+let send = document.querySelector(".btn-contact");
+let message = document.querySelector(".message");
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  message.style.color = "red";
+  message.style.fontSize = "10px";
+  message.style.textAlign = "center";
+  message.innerText = "Gracias! Su formulario ha sido enviado.";
+
+
+  document.querySelector(".form-area").value="";
+  document.getElementById("form-phone").value="";
+  document.querySelector(".form-area-email").value="";
+  document.querySelector(".form-area-subject").value="";
+  document.querySelector(".form-area-message").value="";
+});
+
+// Slider para las cards en la sección "What I Do":
+// Agrupa todas las cards en una fila utilizando un contenedor. Establece
+// un ancho fijo al contenedor para que solo se muestre una parte.
+// Crea un ‘slider’ agregando así botones de desplazamiento (izquierda y
+// derecha) para cambiar la posición del contenedor y mostrar más cards.
+

@@ -469,20 +469,20 @@
           </div>
         </div>
         <div class="cont-contact-der"></div>
-        <form action="">
+        <form action="" class="form">
           <div class="div-phone-name">
             <div class="div-name">
               <label for="">Your name</label>
-              <input type="text" class="form-area" />
+              <input type="text" class="form-area" required />
             </div>
             <div class="div-phone">
               <label for="" class="label-phone">Phone number</label>
-              <input type="text" class="form-area" />
+              <input type="tel" class="form-area" id="form-phone" />
             </div>
           </div>
           <div class="div-email">
             <label for="" class="label-email">Email</label>
-            <input type="text" class="form-area-email" />
+            <input type="email" class="form-area-email" required/>
           </div>
           <div class="div-subject">
             <label for="" class="label-subject">Subject</label>
@@ -496,9 +496,11 @@
               cols="30"
               rows="10"
               class="form-area-message"
+              required
             ></textarea>
           </div>
           <button class="btn-contact">Send message</button>
+          <div class="message"></div>
         </form>
       </div>
       <div class="div-divisor"></div>
