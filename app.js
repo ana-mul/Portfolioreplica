@@ -66,3 +66,13 @@ form.addEventListener("submit", (event) => {
 // Crea un ‘slider’ agregando así botones de desplazamiento (izquierda y
 // derecha) para cambiar la posición del contenedor y mostrar más cards.
 
+let container = document.querySelectorAll(".card-feat");
+let arrayDiv =["card-feat banner-1", "card-feat banner-2", "card-feat banner-3", "card-feat banner-4", "card-feat banner-5", "card-feat banner-6"];
+
+setInterval(()=>{
+  if (index<2){
+    index ++
+  } else {
+    index=0
+  }
+},3000);
