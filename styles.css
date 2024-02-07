@@ -673,8 +673,8 @@ main i {
   background: linear-gradient(to bottom right, #aac2d314, #f5f6f6);
   padding: 23px 60px;
   position: absolute;
-  left: 178px;
-  top: 2228px;
+  left: 170px;
+  top: 2070px;
 }
 .card-ps:hover {
   color: var(--font-color);
@@ -684,8 +684,8 @@ main i {
   background: linear-gradient(to bottom right, #aac2d314, #f5f6f6);
   padding: 23px 60px;
   position: absolute;
-  left: 388px;
-  top: 2228px;
+  left: 378px;
+  top: 2070px;
 }
 .card-ex:hover {
   color: var(--font-color);
@@ -696,7 +696,7 @@ main i {
   padding: 23px 70px;
   position: absolute;
   left: 660px;
-  top: 2228px;
+  top: 2070px;
 }
 .card-in:hover {
   color: var(--font-color);
@@ -706,8 +706,8 @@ main i {
   background: linear-gradient(to bottom right, #aac2d314, #f5f6f6);
   padding: 23px 70px;
   position: absolute;
-  left: 890px;
-  top: 2228px;
+  left: 900px;
+  top: 2070px;
 }
 
 /*--------------------------------------RESPONSIVE CONTENEDOR SUPERIOR-----------------------------------------*/
