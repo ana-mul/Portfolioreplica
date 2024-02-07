@@ -12,14 +12,12 @@ imagen.addEventListener("mouseout", () => {
 // CARDS SABER MAS
 
 let mas = document.querySelectorAll(".card-port .btn-mas");
-let parrafo = document.querySelectorAll(".card-port-hide .p-mas");
-let git = document.querySelectorAll(".card-port-hide .git");
 let menos = document.querySelectorAll(".card-port-hide .btn-menos");
 let cardOriginal = document.querySelectorAll(".card-port");
 let cardMas = document.querySelectorAll(".card-port-hide");
 
 mas.forEach((masList, index) => {
-  //como querySelector llama una coleccion de elementos, tengo que lograr iterar sobre cada uno
+  //como querySelectorAll llama una coleccion de elementos, tengo que lograr iterar sobre cada uno
   masList.addEventListener("click", () => {
     //una vez que logro acceder a cada elemento utilizo el evento
     let indexCardOriginal = cardOriginal[index]; //aca  necesito acceder a cada una de las cards
@@ -52,27 +50,40 @@ form.addEventListener("submit", (event) => {
   message.style.textAlign = "center";
   message.innerText = "Gracias! Su formulario ha sido enviado.";
 
-
-  document.querySelector(".form-area").value="";
-  document.getElementById("form-phone").value="";
-  document.querySelector(".form-area-email").value="";
-  document.querySelector(".form-area-subject").value="";
-  document.querySelector(".form-area-message").value="";
+  document.querySelector(".form-area").value = "";
+  document.getElementById("form-phone").value = "";
+  document.querySelector(".form-area-email").value = "";
+  document.querySelector(".form-area-subject").value = "";
+  document.querySelector(".form-area-message").value = "";
 });
 
-// Slider para las cards en la sección "What I Do":
-// Agrupa todas las cards en una fila utilizando un contenedor. Establece
-// un ancho fijo al contenedor para que solo se muestre una parte.
-// Crea un ‘slider’ agregando así botones de desplazamiento (izquierda y
-// derecha) para cambiar la posición del contenedor y mostrar más cards.
+//SLIDER
 
-let container = document.querySelectorAll(".card-feat");
-let arrayDiv =["card-feat banner-1", "card-feat banner-2", "card-feat banner-3", "card-feat banner-4", "card-feat banner-5", "card-feat banner-6"];
+let bannerHide = document.querySelectorAll(".banner-hide");
+let bannerShow = document.querySelectorAll(".banner-show");
+let next = document.querySelector(".next");
+let prev = document.querySelector(".prev");
 
-setInterval(()=>{
-  if (index<2){
-    index ++
-  } else {
-    index=0
+next.addEventListener("click", () => {
+  for (let i = 0; i < bannerShow.length; i++) {
+    if (getComputedStyle(bannerShow[i]).display === "none"){ //getComputedStyle sirve para acceder a los estilos de un elemento
+      bannerHide[i].style.display = "none";
+      bannerShow[i].style.display = "inline";
+    } else {
+      bannerHide[i].style.display = "inline";
+      bannerShow[i].style.display = "none";
+    }
   }
-},3000);
+});
+
+prev.addEventListener("click", () => {
+  for (let i = 0; i < bannerHide.length; i++){
+    if(getComputedStyle(bannerShow[i]).display === "none"){
+      bannerHide[i].style.display = "none";
+      bannerShow[i].style.display = "inline";
+    } else {
+      bannerHide[i].style.display = "inline";
+      bannerShow[i].style.display = "none";
+    }   
+}
+});

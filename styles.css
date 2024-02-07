@@ -418,31 +418,37 @@ main i {
   margin-left: 20px;
   padding-bottom: 20px;
 }
+
 .cont-feat {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 35px;
+  gap: 15px;
   justify-content: center;
 }
-.card-feat {
+.banner-hide, .banner-show {
   width: 290px;
   height: 210px;
   padding: 25px;
   justify-content: center;
-  gap: 10px;
   border-radius: 10px;
   box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.701),
     2px 5px 10px -5px rgba(14, 14, 15, 0.782);
   background: linear-gradient(to bottom right, #aac2d314, #f5f6f6);
   background-color: none;
 }
-.card-feat h3 {
+.banner-show{
+  display: inline;
+}
+.banner-hide{
+  display: none;
+}
+.banner-hide h3 , .banner-show h3 {
   font-size: 17px;
   background-color: transparent;
   margin-top: 12px;
 }
-.card-feat p {
+.banner-hide p , .banner-show p {
   font-size: 11px;
   font-weight: 400;
   letter-spacing: 0.5px;
@@ -454,6 +460,22 @@ main i {
   color: var(--font-color);
   margin: 0px 0px 10px 15px;
   background-color: transparent;
+}
+.fa-chevron-left, .fa-chevron-right, .prev, .next{
+  font-size: 20px;
+  background-color: transparent;
+  padding: 10px;
+  border: none;
+}
+.prev{
+  position: relative;
+  bottom:140px;
+  right:435px;
+}
+.next{
+  position: relative;
+  bottom:140px;
+  left:420px;
 }
 
 /*--------------------------------------RESPONSIVE FEATURES-----------------------------------------*/
@@ -1161,6 +1183,12 @@ label {
   font-weight: 300;
   background-color: transparent;
   margin: 10px 15px;
+}
+.form input{
+  padding:5px;
+}
+.form textarea{
+  padding: 5px;
 }
 .form-area {
   border: 1.5px solid rgba(128, 128, 128, 0.253);
