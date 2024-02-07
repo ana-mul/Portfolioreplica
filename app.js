@@ -9,7 +9,7 @@ imagen.addEventListener("mouseout", () => {
   imagen.src = "images/img-main.png";
 });
 
-// CARDS SABER MAS
+//CARDS SABER MAS
 
 let mas = document.querySelectorAll(".card-port .btn-mas");
 let menos = document.querySelectorAll(".card-port-hide .btn-menos");
@@ -37,7 +37,7 @@ menos.forEach((menosList, index) => {
   });
 });
 
-// MENSAJE FORMULARIO
+//MENSAJE FORMULARIO
 
 let form = document.querySelector(".form");
 let send = document.querySelector(".btn-contact");
